@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let grado of grados">
+                <td>{{grado.id}}</td>
+                <td>{{grado.descripcion}}</td>
+                <td>
+                    <button id={{grado.id}} (click)="actualizarGrado(grado.id)" class="btn btn-warning">Editar</button>
+                    <button class="btn btn-danger" (click)="eliminarGrado(grado.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

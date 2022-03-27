@@ -1,0 +1,10 @@
+<div *ngIf="grado" class="container">
+    <h3 class="text-center">EDITAR GRADO</h3>
+    <form (ngSubmit)="actualizarGrado()">
+        <div class="mb-3">
+            <label for="apellido">Descripcion:</label>
+            <input type="text" class="form-control" name="descripcion" id="descripcion" value={{grado.descripcion}} [(ngModel)]="grado.descripcion">
+        </div>
+        <button type="submit" class="btn btn-warning">Editar</button>
+    </form>
+</div>
