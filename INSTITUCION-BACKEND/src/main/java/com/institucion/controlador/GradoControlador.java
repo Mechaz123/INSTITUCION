@@ -47,7 +47,7 @@ public class GradoControlador {
     }
 	
 	@PutMapping("/grados/{id}")
-	public ResponseEntity<Grado> actualizarEmpleado(@PathVariable Long id,@RequestBody Grado detallesGrado){
+	public ResponseEntity<Grado> actualizarGrado(@PathVariable Long id,@RequestBody Grado detallesGrado){
     	Grado grado = repositorio.findById(id).orElseThrow(() -> new ResourceNotFoundException(("No existe el empleado con el ID" + id)));
     	grado.setDescripcion(detallesGrado.getDescripcion());
     	Grado gradoActualizado = repositorio.save(grado);
